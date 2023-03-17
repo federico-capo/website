@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Federico Caporuscio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
@@ -14,17 +14,15 @@
   <header class="header">
     <div class="header__content">
       <a class="header__logo" href="">
-        <strong>LOGO</strong>
+        <strong>FC</strong>
       </a>
       <ul class="header__menu">
-        <li><a href="">Store</a></li>
-        <li><a href="">Mac</a></li>
-        <li><a href="">iPad</a></li>
-        <li><a href="">iPhone</a></li>
-        <li><a href="">Watch</a></li>
+        <li><a href="#">Chi sono</a></li>
+        <li><a href="#lavori">Lavori</a></li>
+        <li><a href="#"></a></li>
       </ul>
       <div class="header__quick">
-        <a href="">Contacts</a>
+        <a href="">Contattami</a>
           <div class="icon-hamburger">
             <span></span>
             <span></span>
@@ -33,44 +31,94 @@
     </div>
   </header>
 
-  <div class="cover" style="background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('https://source.unsplash.com/random');">
-    <div class="cover__content">
-      <h1> Lorem </h1>
-      <h2> test </h2>
-      <a href="" class="button">Test</a>
+
+  <div class="spacer"></div>
+  <div class="grid hero">
+    <div class="col-50 ">
+      
+      <h1>Contattami <span>!</span></h1>
+      <p style="margin-top: 20px;">Ciao, sono <span>Federico Caporuscio </span></p>
+      <form id="contact-form">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="subject">Oggetto:</label>
+        <input type="text" id="subject" name="subject" required>
+        
+        <label for="message">Messaggio:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Invia</button>
+      </form>
+      
+      
+    </div>
+    <div class="col-50 laptop">
+      <img class="img-res "src="img/bolb.png" alt="">
+      <img class="img-res-ab animazione" style="width: 80%; top: 20px; "src="img/bolb2.png" alt="">
+      <img class="img-res-ab"  src="/img/laptop1.png" alt="">
+
     </div>
   </div>
 
   <div class="spacer"></div>
 
 
-  <div class="grid">
-    <div class="col-50">
-      <h1>lorem sia</h1>
-      <h2>Amet labor</h2>
-      <h3>almer ta bkjsio</h3>
-      <a href="#" class="button mb-2">Call to action</a>
-    </div>
-    <div class="col-100">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam facere fugiat laborum optio vitae magnam blanditiis quo ducimus architecto sequi placeat dignissimos magni rerum sunt provident inventore, velit culpa eveniet!</p>
-
-    </div>
-
-    <div class="col-50">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam facere fugiat laborum optio vitae magnam blanditiis quo ducimus architecto sequi placeat dignissimos magni rerum sunt provident inventore, velit culpa eveniet!</p>
-    </div>
-    <div class="col-50">
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam facere fugiat laborum optio vitae magnam blanditiis quo ducimus architecto sequi placeat dignissimos magni rerum sunt provident inventore, velit culpa eveniet!</p>
-    </div>
-  </div>
 
 
+
+
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault(); // impedisci il comportamento predefinito del form
+
+      // Prendi i valori del form
+      var name = document.getElementById('name').value;
+      var email = document.getElementById('email').value;
+      var subject = document.getElementById('subject').value;
+      var message = document.getElementById('message').value;
+
+      // Costruisci i dati da inviare tramite AJAX
+      var data = new FormData();
+      data.append('name', name);
+      data.append('email', email);
+      data.append('subject', subject);
+      data.append('message', message);
+
+      // Invia i dati tramite AJAX
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', 'send-email.php', true);
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          console.log('Email inviata con successo!');
+        } else {
+          console.log('Si è verificato un errore durante l\'invio dell\'email.');
+        }
+      };
+      xhr.send(data);
+
+      // Resetta il form
+      document.getElementById('contact-form').reset();
+    });
+  </script>
    <script> 
     let item = document.querySelector('.icon-hamburger');
     item.addEventListener("click", function() {
       document.body.classList.toggle('menu-open');
     });
    </script>
+  <script>
+    function apri() {
+      document.getElementById("mioform").style.display = "block";
+    }
+    function chiudi() {
+      document.getElementById("mioform").style.display = "none";
+    }
+  </script>
 
 </body>
 </html>

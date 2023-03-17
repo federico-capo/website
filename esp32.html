@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Federico Caporuscio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__content">
+      <a class="header__logo" href="index.html">
+        <strong>FC</strong>
+      </a>
+      <ul class="header__menu">
+        <li><a href="#">Chi sono</a></li>
+        <li><a href="#lavori">Lavori</a></li>
+        <li><a href="#"></a></li>
+      </ul>
+      <div class="header__quick">
+        <a href="">Contattami</a>
+          <div class="icon-hamburger">
+            <span></span>
+            <span></span>
+          </div>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="spacer"></div>
+  <div class="spacer"></div>
+  
+  <div class="grid">
+    <div class="col-100" style="text-align: center;">
+      <h1>Esp32 <span>Server</span></h1>
+    </div>
+
+  </div>
+  <div class="spacer"></div>
+
+
+   <script> 
+    let item = document.querySelector('.icon-hamburger');
+    item.addEventListener("click", function() {
+      document.body.classList.toggle('menu-open');
+    });
+   </script>
+
+</body>
+</html>

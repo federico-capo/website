@@ -1,0 +1,43 @@
+/* animazione */
+.animazione3 {
+    position: absolute;
+    animation: animazione3 20s infinite;
+  
+  }
+  
+  @keyframes animazione3 {
+    0%,
+    100% {
+  
+      top: 20px;
+    }
+  
+    50% {
+      top: 200px;
+      left: 200px;
+   
+    }
+  }
+  
+/* animazione */
+.animazione4 {
+    position: absolute;
+    animation: animazione5 20s infinite;
+  
+  }
+  
+  @keyframes animazione4 {
+    0%,
+    100% {
+  
+      top: 20px;
+    }
+  
+    50% {
+      top: 500px;
+      righ: 300px;
+   
+    }
+  }
+  
+

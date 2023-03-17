@@ -6,10 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Federico Caporuscio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <!-- animazioni -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 <body>
+
 
   <header class="header">
     <div class="header__content">
@@ -18,7 +23,7 @@
       </a>
       <ul class="header__menu">
         <li><a href="#">Chi sono</a></li>
-        <li><a href="#lavori">Lavori</a></li>
+        <li><a href="progetti.html">Lavori</a></li>
         <li><a href="#"></a></li>
       </ul>
       <div class="header__quick">
@@ -33,99 +38,62 @@
 
 
   <div class="spacer"></div>
-  <div class="grid hero">
-    <div class="col-50 ">
-      <h1>Dal <span>sogno</span> al <span>codice</span></h1>
-      <p>Ciao, sono <span>Federico Caporuscio </span> , un developer alle prime armi. 
-        Su questo sito condividerò la mia esperienza 
-        di apprendimento nel mondo della programmazione. Troverete
-        i miei obiettivi, i progetti che ho sviluppato e come ho 
-        risolto i problemi tecnici. </p>
+  <div class="spacer"></div>
+  <div class="grid laptop">
+    <div class="col-50 laptop"
+    data-aos="fade-right"
+    data-aos-offset="300"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-sine">
+    
+      <h1 id="typing" >Dal <span>sogno</span> al <span>codice</span></h1>
+      <p id="txt_principale"></p>
          <a href="#lavori" class="calltoaction mb-2">Progetti </a>
-         <a href="#lavori" class="calltoaction mb-2">CV Download </a>
+         <a href="" class="calltoaction mb-2">CV Download </a>
     </div>
-    <div class="col-50 laptop">
+
+    <div class="col-50 "
+   
+    data-aos-offset="300"
+    data-aos-duration="500"
+    data-aos-easing="ease-in-sine">
       <img class="img-res "src="img/bolb.png" alt="">
       <img class="img-res-ab animazione" style="width: 80%; top: 20px; "src="img/bolb2.png" alt="">
-      <img class="img-res-ab"  src="/img/laptop.png" alt="">
-
+      <img class="img-res-ab "style="width: 80%; top: 10px; margin-left:40px" src="/img/laptop1.png" >
     </div>
   </div>
 
+  <div class="spacer"></div>
   <div class="spacer"></div>
 
   <div id="lavori"class="cover" style="margin-top:40px;background-image:linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('img/cover.png');">
     <div class="cover__content">
-      <h1>Lavori</h1>
+      <h1 data-aos="fade-up"data-aos-duration="2000">Lavori</h1>
     </div>
   </div>
 
   <div class="spacer"></div>
 
+
   <div class="grid lavori">
-    <div class="col-33 ">
-      <h1><span>Esp32</span></h1>
-      <h2>Server</h2>
-      <a  class="button mb-2" onClick="apri()"  >Scopri </a>
-    </div>
-    <div class="col-33 ">
-      <h1><span>Domotica</span></h1>
-      <h2>con python</h2>
-      <a href="#" class="button mb-2">Scopri </a>
-    </div>
-    <div class="col-33 ">
-      <h1><span>Django</span></h1>
-      <h2>Gestionale</h2>
-      <button href="#" class="button mb-2">Scopri</button>
+    <div class="col-100 ">
+        <h1 style="margin-top: 80px;" data-aos="fade-up"data-aos-duration="2000">Progetti <span id="testo_lavori"> </span></h1>
+        <button class="button" style="margin-top: 80px;" onclick="progetti()" > Mostra</button>
     </div>
   </div>
-<div class="spacer"></div>
+  <div class="spacer"></div>
 
-
-
-<div class="form" id="mioform">
-<div class="grid ">
-  <div class="col-50">
-  <h1>Esp32 server</h1>
-  <p> controllo umidità e temperatura</p>
-  <a class="button" onclick="chiudi() "> Chiudi</a>
-</div>
-<div class="col-50">
-  <img class="img-res"src="/img/arduino-ide.jpg" alt="">
-  <img class="img-res"src="/img/esp32w.png" alt="">
-  <img class="img-res"src="/img/esp32w1.png" alt="">
-  <img class="img-res"src="/img/esp32w3.png" alt="">
-</div>
-</div>
-  
-</div>
-
-
-
-
-
-
-
-
-
-
-
-   <script> 
-    let item = document.querySelector('.icon-hamburger');
-    item.addEventListener("click", function() {
-      document.body.classList.toggle('menu-open');
-    });
-   </script>
-
-   <script>
-    function apri() {
-      document.getElementById("mioform").style.display = "block";
-    }
-    
-    function chiudi() {
-      document.getElementById("mioform").style.display = "none";
-    }
-    </script>
-
+<div class="footer"></div>
+<script>
+//menuburger
+let item = document.querySelector('.icon-hamburger');
+item.addEventListener("click", function() {
+  document.body.classList.toggle('menu-open');
+});
+</script>
+<script>
+  AOS.init();
+</script>
 </body>
+
 </html>

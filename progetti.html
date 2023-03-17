@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Federico Caporuscio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- animazioni -->
+<link rel="stylesheet" href="animazioni.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- <script src="script.js"></script> -->
+
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__content">
+      <a class="header__logo" href="index.html">
+        <strong>FC</strong>
+      </a>
+      <ul class="header__menu">
+        <li><a href="#">Chi sono</a></li>
+        <li><a href="#lavori">Lavori</a></li>
+        <li><a href="#"></a></li>
+      </ul>
+      <div class="header__quick">
+        <a href="">Contattami</a>
+          <div class="icon-hamburger">
+            <span></span>
+            <span></span>
+          </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- <img class="img-res-ab animazione3" src="img/ball1.png" style="width: 50%;"> -->
+  <!-- <img class="img-res-ab animazione4" src="img/bolb.png" style="width: 30%; left:300px;top: 80px;"> -->
+  <img class="img-res-ab animazione3" src="img/ball1.png" style="width: 40%;">
+  
+
+  <div class="spacer"></div>
+  <div class="grid space">
+    <div class="col-25 card_progetti"data-aos="flip-up"data-aos-duration="1500">
+      <h1>Esp32 <span>Server</span></h1>
+      <p>Controlla temperatura e umidità ed dei led 
+        tramite un interfaccia grafica.
+        Raccolta dati e invio ad un server linux
+      </p>
+      <button  class="demo_btn" onclick="esp32()" data-aos="zoom-in"> Demo</button>
+    </div>
+
+    <div class="col-25  card_progetti"data-aos="flip-up"data-aos-duration="1500">
+      <h1>Python<span> Flask </span> Gestionale</h1>
+      <p>Sistema di registrazione e di login,
+        tramite flask effettuo una connessione ad un Database
+        esterno.
+        prendo dei dati elimino oppure aggiungo dati al Database
+        ad esempio 
+      </p>
+      <button  class="demo_btn" onclick="flask()" data-aos="zoom-in"> Demo</button>
+    </div>
+
+    <div class="col-25 card_progetti"data-aos="flip-up"data-aos-duration="1500">
+      <h1>Altri  <span>Progetti</span></h1>
+      <p>Qui puoi ci sono dei piccoli progetti che ho fatto.
+        
+      </p>
+      <button  class="demo_btn" onclick="flask()" data-aos="zoom-in"> Demo</button>
+    </div>
+
+  </div>
+
+  <div class="spacer"></div>
+
+
+
+   <script> 
+    let item = document.querySelector('.icon-hamburger');
+    item.addEventListener("click", function() {
+      document.body.classList.toggle('menu-open');
+    });
+    //redirect
+    function flask() {
+    location.href = "flask.html"  
+    }
+    function esp32() {
+    location.href = "esp32.html"  
+    }
+   </script>
+   <!-- //animazioni -->
+    <script>
+      AOS.init();
+    </script>
+
+</body>
+</html>
